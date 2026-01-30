@@ -115,7 +115,7 @@ export default function RealProblemsRealResultsSection() {
       <div className="mx-[7.5vw]">
         {/* Header with Navigation */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 md:mb-16 gap-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl text-black font-bold">
             Real <span className="text-[#3b155f]">Problems.</span> Real{" "}
             <span className="text-[#3b155f]">Results.</span>
           </h2>

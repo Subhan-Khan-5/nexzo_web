@@ -12,8 +12,8 @@ export default function WorkedWithSection() {
   ];
 
   return (
-    <section className="relative w-full bg-[#3b155f] py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
-      <div className="absolute  blur-[220px] top-0 -left-30 rounded-full bg-amber-50 w-[70vw] -rotate-45 h-[400px]   "></div>
+    <section className="relative w-full overflow-hidden bg-[#3b155f] py-8 sm:py-12 md:py-16 lg:py-20 ">
+      <div className="absolute  blur-[150px] top-0 -left-30 rounded-full bg-amber-50 w-[70vw] -rotate-45 h-[400px]   "></div>
       <div className="mx-4 sm:mx-6 md:mx-[7.5vw]">
         {/* Header */}
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-center">

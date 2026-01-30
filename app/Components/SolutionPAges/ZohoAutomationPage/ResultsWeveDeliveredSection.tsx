@@ -40,7 +40,7 @@ export default function ResultsWeveDeliveredSection() {
   return (<div className="relative  ">
     <div className="absolute  bg-cover bg-center h-[40vh] top-[40%] right-[0] z-0" > <img src="/images/grid.png" alt="grid"  /> </div>
     <div className="absolute  bg-cover bg-center h-[40vh] top-[60%] left-[0] z-0" > <img src="/images/grid.png" alt="grid"  /> </div>
-  <section className="relative mt-[10vh] px-2 py-16 min-w-[380px] sm:w-[580px] md:w-[750px] lg:w-[850px] xl:w-[1000px] 2xl:w-[1200px] mx-auto md:px-6 md:px-[7.5vw] bg-white  bg-cover bg-center">
+  <section className="relative mt-[20vh] md:mt-[10vh] px-2 py-16 min-w-[380px] sm:w-[580px] md:w-[750px] lg:w-[850px] xl:w-[1000px] 2xl:w-[1200px] mx-auto md:px-6 md:px-[7.5vw] bg-white  bg-cover bg-center">
       {/* Grid pattern background */}
       <div
         className="absolute inset-0 opacity-30"
