@@ -13,7 +13,7 @@ import LetsBuildSection from "@/app/Components/HomeComponents/LetsBuildSection";
 
 export default function SystemIntegrationAIPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <SystemIntegrationAIHeroSection
         heading="Build a product that doesn't break after launch."
         subHeading="Full-stack web and mobile development for teams building production-grade software."
