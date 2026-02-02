@@ -11,7 +11,7 @@ import SystemIntegrationAIHeroSection from "@/app/Components/SolutionPAges/Syste
 
 export default function ZohoAutomationPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <SystemIntegrationAIHeroSection
         heading="Your Zoho Automations Are Costing You Revenue"
         subHeading="We audit and fix broken Zoho CRM automations so revenue stops leaking and teams can trust their data again."

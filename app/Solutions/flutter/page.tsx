@@ -10,7 +10,7 @@ import LetsBuildSection from "@/app/Components/HomeComponents/LetsBuildSection";
 
 export default function FlutterPage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <SystemIntegrationAIHeroSection
         heading="Launch a mobile app users actually keep."
         subHeading="Flutter app development for scalable, production-ready mobile products."

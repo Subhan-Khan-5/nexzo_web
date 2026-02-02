@@ -98,9 +98,9 @@ export default function SystemIntegrationAIPage() {
           "One-time build with no support"
         ]}
         variant="not-for-everyone"
-        color="#214E34"
+        color="#749182"
       />
- <LetsBuildSection headline="If your app needs to last, start with clarity." description="We'll review your app idea, risks, and roadmap before development begins." bgColor="#FFFFFF" buttonColor="#214E34" buttonTextColor="#FFFFFF" buttonText="Get Your Free Audit" buttonLink="#" variant="clarity" />
+ <LetsBuildSection headline="If your app needs to last, start with clarity." description="We'll review your app idea, risks, and roadmap before development begins." bgColor="#FFFFFF" buttonColor="#749182" buttonTextColor="#FFFFFF" buttonText="Get Your Free Audit" buttonLink="#" variant="clarity" />
 
         <div className="bg-[#749182]">
       <GetAQuoteSection variant="Full Stack" color="FFFFFF" />

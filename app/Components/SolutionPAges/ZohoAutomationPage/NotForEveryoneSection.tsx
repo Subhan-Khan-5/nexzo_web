@@ -54,7 +54,7 @@ export default function NotForEveryoneSection({
   };
 
   return (
-    <section className={`relative bg-white  ${isNotForEveryoneVariant ? "py-12 md:py-16 lg:py-20" : isProductBuildsVariant ? "mt-[10vh] min-w-[380px] w-full mx-auto md:px-0 md:px0" : "mt-[10vh] px-2 min-w-[380px] w-full bg-white"}`}>
+    <section className={`relative ${isNotForEveryoneVariant ? "py-12 md:py-16 lg:py-20" : isProductBuildsVariant ? "mt-[10vh] min-w-[380px] w-full mx-auto md:px-0 md:px0" : "mt-[10vh] px-2 min-w-[380px] w-full bg-white"}`}>
       <div 
         className={`relative  z-10 overflow-hidden ${isNotForEveryoneVariant ? "w-full py-8 md:py-12 " : "shadow-2xl  shadow-black/50 min-w-[350px] mx-auto py-12 md:py-16"} flex flex-col justify-center ${isProductBuildsVariant ? "pl-2 sm:pl-10 w-full  items-start" : isNotForEveryoneVariant ? "items-start px-6 md:px-8 lg:px-12 rounded-2xl" : "rounded-2xl items-center"}`}
         style={
@@ -63,7 +63,7 @@ export default function NotForEveryoneSection({
           : porp2 ? { backgroundColor: "transparent" } : undefined
         }
       >
-        <div className={`absolute  z-[-1] ${color === "#749182" ? "-top-1/2 -right-[30%] " : " -top-[40%] -left-[15%] " } w-[65vw] h-[62vh] bg-white blur-2xl rounded-full z-0`}></div>
+        <div className={`absolute  z-[-1] ${color === "#749182" ? "-top-1/2 -right-[30%] " : " -top-[40%] -left-[15%] " } w-[65vw] h-[62vh] opacity-70 bg-white blur-2xl rounded-full z-0`}></div>
         <div className={`absolute  ${color === "#749182" ? "bottom-[10%] -left-[35%] " :  " bottom-[10%] -right-[35%]"}  z-[-1] w-[45vw] h-[42vh] bg-white blur-[125px] rounded-full z-0`}></div>
         
         {/* Title */}

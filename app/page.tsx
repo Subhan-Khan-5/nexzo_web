@@ -11,7 +11,7 @@ import SystemIntegrationAIHeroSection from "./Components/SolutionPAges/SystemInt
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
         <SystemIntegrationAIHeroSection
         heading="We don't just build software we engineer Growth."
         subHeading="Most agencies deliver projects. We deliver infrastructure that runs your business. Seamlessly integrated, built to evolve, and designed to perform from day one."
