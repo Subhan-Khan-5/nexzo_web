@@ -199,7 +199,7 @@ backdrop-blur-xl shadow-lg rounded-2xl">
                   }}
                   className={`block text-sm ${isAboutUsPage ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-[#4B0082]"} transition-colors`}
                 >
-                  Zoho Automation
+                  Zoho Automation Integration
                 </Link>
                 <Link
                   href="/Solutions/systemintegrationai"
@@ -209,7 +209,7 @@ backdrop-blur-xl shadow-lg rounded-2xl">
                   }}
                   className={`block text-sm ${isAboutUsPage ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-[#4B0082]"} transition-colors`}
                 >
-                  Full Stack Automation
+                  Full Stack Development
                 </Link>
                 <Link
             href="/Solutions/flutter"

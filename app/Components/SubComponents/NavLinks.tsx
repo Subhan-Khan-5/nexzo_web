@@ -79,14 +79,14 @@ export default function NavLinks({ isAboutUsPage = false }: NavLinksProps) {
             onClick={() => setIsSolutionsOpen(false)}
             className="block px-4 py-2 hover:bg-[#4B0082] hover:text-white transition-colors duration-200"
           >
-            Zoho Automation
+            Zoho Automation Integration
           </Link>
           <Link
             href="/Solutions/systemintegrationai"
             onClick={() => setIsSolutionsOpen(false)}
             className="block px-4 py-2 hover:bg-[#4B0082] hover:text-white transition-colors duration-200"
           >
-            Full Stack Automation
+            Full Stack development
           </Link>
           <Link
             href="/Solutions/flutter"
