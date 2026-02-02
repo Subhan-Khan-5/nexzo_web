@@ -9,6 +9,7 @@ import WhyTeamsChooseNexzoSection from "@/app/Components/HomeComponents/WhyTeams
 import WhatThisHelpsYouLaunchSection from "../../Components/SolutionPAges/SystemIntegrationAIPage/WhatThisHelpsYouLaunchSection";
 import WeAlsoHandleSection from "@/app/Components/HomeComponents/WeAlsoHandleSection";
 import RealProblemsRealResultsSection from "@/app/Components/HomeComponents/RealProblemsRealResultsSection";
+import LetsBuildSection from "@/app/Components/HomeComponents/LetsBuildSection";
 
 export default function SystemIntegrationAIPage() {
   return (
@@ -99,6 +100,7 @@ export default function SystemIntegrationAIPage() {
         variant="not-for-everyone"
         color="#214E34"
       />
+ <LetsBuildSection headline="If your app needs to last, start with clarity." description="We'll review your app idea, risks, and roadmap before development begins." bgColor="#FFFFFF" buttonColor="#214E34" buttonTextColor="#FFFFFF" buttonText="Get Your Free Audit" buttonLink="#" variant="clarity" />
 
         <div className="bg-[#749182]">
       <GetAQuoteSection variant="Full Stack" color="FFFFFF" />

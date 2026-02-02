@@ -61,7 +61,7 @@ export default function OurPrinciplesSection({
                 key={index}
                 className={`relative  w-full`}
               >
-                <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-6 lg:gap-8  items-end">
+                <div className="flex flex-col md:items-end md:flex-row justify-between gap-4 md:gap-6 lg:gap-8  items-start">
                   {/* Number */}
                   <div className="flex-shrink-0 -ml-2 md:ml-0">
                     <div
