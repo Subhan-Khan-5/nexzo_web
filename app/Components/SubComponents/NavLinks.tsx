@@ -86,7 +86,7 @@ export default function NavLinks({ isAboutUsPage = false }: NavLinksProps) {
             onClick={() => setIsSolutionsOpen(false)}
             className="block px-4 py-2 hover:bg-[#4B0082] hover:text-white transition-colors duration-200"
           >
-            Full Stack development
+            Full Stack Development
           </Link>
           <Link
             href="/Solutions/flutter"
