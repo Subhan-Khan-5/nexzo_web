@@ -19,7 +19,7 @@ export default function ZohoAutomationPage() {
         buttonLink="#"
         bottomText="Built by engineers who've fixed 50+ Zoho systems across sales, finances, and operations."
         gradientColor="#A3BAC3"
-        imgSrc="/images/ZohoEllipse.png"
+        imgSrc="/images/zohoEllipse.png"
       />
       <WhyAutomationsFailSection
         title="Why Most Zoho Automations Fail"
