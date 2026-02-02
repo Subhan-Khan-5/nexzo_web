@@ -91,7 +91,11 @@ export default function Navbar() {
   return (
     <nav className="w-[85vw] mx-auto fixed top-4 left-0 right-0 z-50 rounded-2xl">
       <header className="relative z-20 flex items-center justify-between px-10 py-4
-                         bg-white/10 backdrop-blur-xl border border-white/20 shadow-lg rounded-2xl">
+                         bg-gradient-to-b
+from-black/10
+via-black/5
+to-black/15
+backdrop-blur-xl shadow-lg rounded-2xl">
         {/* Logo */}
         <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2 font-semibold">
           <Image src="/images/Purple.png" alt="Nexzo Logo" width={35} height={35} />
@@ -207,7 +211,15 @@ export default function Navbar() {
                 >
                   Full Stack Automation
                 </Link>
-               
+                <Link
+            href="/Solutions/flutter"
+            onClick={() => {setIsSolutionsOpen(false);
+              setIsMobileMenuOpen(false);
+            }}
+            className={`block text-sm ${isAboutUsPage ? "text-white/90 hover:text-white" : "text-gray-700 hover:text-[#4B0082]"} transition-colors`}
+          >
+            Flutter App Development
+          </Link>
               </div>
             )}
           </div>

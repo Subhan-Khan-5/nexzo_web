@@ -15,13 +15,40 @@ export default function OurPrinciplesSection({
   principles,color,
   highlightedIndex = 1, // Default to second principle (index 1)
 }: OurPrinciplesSectionProps) {
+  // Function to render title with highlighted word
+  const renderTitle = () => {
+    if (!title) return null;
+    
+    // Determine which word to highlight based on the title
+    const wordsToHighlight = ["Principle", "Principles", "predictable"];
+    const words = title.split(/(\s+)/);
+    
+    return (
+      <h2 className={`text-4xl  font-bold ${principles.length === 4 ? "text-2xl" : "sm:text-5xl md:text-6xl"}  mb-12 md:mb-16`}>
+        {words.map((word, index) => {
+          const cleanWord = word.trim().toLowerCase();
+          const shouldHighlight = wordsToHighlight.some(w => 
+            cleanWord === w.toLowerCase()
+          );
+          
+          if (shouldHighlight) {
+            return (
+              <span key={index} style={{ color: color }}>
+                {word}
+              </span>
+            );
+          }
+          return <span key={index}>{word}</span>;
+        })}
+      </h2>
+    );
+  };
+
   return (
     <section className="relative w-full bg-white py-20 md:py-32">
       <div className="mx-[7.5vw]">
         {/* Title */}
-        <h2 className={`text-4xl  font-bold ${principles.length === 4 ? "text-2xl" : "sm:text-5xl md:text-6xl"} text-[#4B0082] mb-12 md:mb-16`}>
-          {title}
-        </h2>
+        {renderTitle()}
 
         {/* Principles List */}
         <div className="space-y-8 md:space-y-12">
@@ -73,6 +100,8 @@ export default function OurPrinciplesSection({
             );
           })}
         </div>
+
+        {color == "#749182" && <p className="text-lg md:text-lg xl:text-2xl mt-10 text-black leading-relaxed max-w-4xl">One owner per project. Clear handoffs. No ambiguity.</p>}
       </div>
     </section>
   );

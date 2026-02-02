@@ -7,11 +7,20 @@ import StopGuessingSection from "../../Components/SolutionPAges/ZohoAutomationPa
 import TestimonialsSection from "../../Components/SolutionPAges/ZohoAutomationPage/TestimonialsSection";
 import GetAQuoteSection from "../../Components/SolutionPAges/ZohoAutomationPage/GetAQuoteSection";
 import WorkedWithSection from "../../Components/HomeComponents/WorkedWithSection";
+import SystemIntegrationAIHeroSection from "@/app/Components/SolutionPAges/SystemIntegrationAIPage/HeroSection";
 
 export default function ZohoAutomationPage() {
   return (
     <div className="min-h-screen">
-      <ZohoAutomationHeroSection />
+      <SystemIntegrationAIHeroSection
+        heading="Your Zoho Automations Are Costing You Revenue"
+        subHeading="We audit and fix broken Zoho CRM automations so revenue stops leaking and teams can trust their data again."
+        buttonText="Get Your Free Audit"
+        buttonLink="#"
+        bottomText="Built by engineers who've fixed 50+ Zoho systems across sales, finances, and operations."
+        gradientColor="#A3BAC3"
+        imgSrc="/images/ZohoEllipse.png"
+      />
       <WhyAutomationsFailSection
         title="Why Most Zoho Automations Fail"
         introText="Most companies treat Zoho like a checkbox exercise. They configure features without understanding how their revenue process actually works. The result is expensive software that creates more manual work, not less."

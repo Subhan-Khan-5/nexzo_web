@@ -33,7 +33,7 @@ export default function InfiniteScrollLogos({
             <Image
               src={company.logo}
               alt={company.name}
-              width={200}
+              width={250}
               height={80}
               className="object-contain opacity-80 hover:opacity-100 transition-opacity max-h-full w-auto h-auto"
             />

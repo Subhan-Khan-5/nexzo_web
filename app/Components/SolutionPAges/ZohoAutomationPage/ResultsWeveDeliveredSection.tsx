@@ -57,7 +57,9 @@ export default function ResultsWeveDeliveredSection() {
             Results We've Delivered
           </h2>
         </div>
+        {/* <div className="absolute top-[0] left-[0] w-[100%] h-[100%] bg-orange-500 blur-xl rounded-full z-0">
 
+        </div> */}
         {/* Case Study Cards */}
         <div className="space-y-8 md:space-y-10">
           {caseStudies.map((study, index) => (

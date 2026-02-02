@@ -4,7 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
-export default function RealProblemsRealResultsSection() {
+interface RealProblemsRealResultsSectionProps {
+  title?: string;
+  subtitle?: string;
+  highlightedWords?: string | string[];
+  highlightColor?: string;
+}
+
+export default function RealProblemsRealResultsSection({
+  title,
+  subtitle,
+  highlightedWords,
+  highlightColor = "#214E34",
+}: RealProblemsRealResultsSectionProps = {}) {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -110,15 +122,58 @@ export default function RealProblemsRealResultsSection() {
     },
   ];
 
+  // Function to render text with highlighted words
+  const renderTextWithHighlights = (text: string) => {
+    if (!highlightedWords || !text) {
+      return text;
+    }
+    
+    const wordsToHighlight = Array.isArray(highlightedWords) ? highlightedWords : [highlightedWords];
+    const regex = new RegExp(`\\b(${wordsToHighlight.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi');
+    const parts = text.split(regex);
+    
+    return parts.map((part, index) => {
+      const isHighlighted = wordsToHighlight.some(highlightWord => 
+        part.toLowerCase() === highlightWord.toLowerCase()
+      );
+      
+      if (isHighlighted) {
+        return (
+          <span key={index} style={{ color: highlightColor }}>
+            {part}
+          </span>
+        );
+      }
+      return <span key={index}>{part}</span>;
+    });
+  };
+
+  const defaultTitle = "Real Problems. Real Results.";
+  const displayTitle = title || defaultTitle;
+  
+  // Determine if we should use highlighted title or default styling
+  const useHighlightedTitle = highlightedWords && (title || subtitle);
+  const titleToDisplay = title || subtitle || defaultTitle;
+
   return (
     <section id="case-studies" className="relative w-full bg-white py-20 md:py-32">
       <div className="mx-[7.5vw]">
         {/* Header with Navigation */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-12 md:mb-16 gap-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl text-black font-bold">
-            Real <span className="text-[#3b155f]">Problems.</span> Real{" "}
-            <span className="text-[#3b155f]">Results.</span>
-          </h2>
+          <div>
+            <h2 className="text-2xl md:text-3xl text-black font-bold mb-4">
+              {useHighlightedTitle ? (
+                renderTextWithHighlights(titleToDisplay)
+              ) : displayTitle.includes("Real Problems") ? (
+                <>
+                  Real <span className="text-[#3b155f]">Problems.</span> Real{" "}
+                  <span className="text-[#3b155f]">Results.</span>
+                </>
+              ) : (
+                displayTitle
+              )}
+            </h2>
+          </div>
           <div className="flex items-center gap-4">
             <Link
               href="/CaseStudies"

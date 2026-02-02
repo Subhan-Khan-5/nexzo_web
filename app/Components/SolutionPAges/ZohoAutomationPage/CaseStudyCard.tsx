@@ -43,14 +43,14 @@ export default function CaseStudyCard({
   };
 
   const glassyClasses = isGlassy
-    ? "bg-white/30 backdrop-blur-[22px] backdrop-saturate-150 border-2 border-white/40 shadow-[0_30px_80px_rgba(88,28,135,0.25)]"
+    ? "bg-gradient-to-b from-black/10 via-black/5 to-black/15 backdrop-blur-xlborder-2 border-white/40 shadow-[0_30px_80px_rgba(88,28,135,0.25)]"
     : hasGradient
     ? "bg-gradient-to-br to-[#74888f] from-[#cee6ee] backdrop-blur-sm shadow-lg"
     : `${bgColor} border-2  shadow-lg`;
 
   return (
     <div
-      className={`${glassyClasses} rounded-2xl p-6 md:p-8`}
+      className={`${glassyClasses} relative rounded-2xl p-6 md:p-8`}
     >
       {/* Company Header */}
       <h3 className="text-xl md:text-2xl font-semibold text-[#4B0082] mb-6">

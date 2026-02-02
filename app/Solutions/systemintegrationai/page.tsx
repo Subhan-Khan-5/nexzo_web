@@ -6,6 +6,9 @@ import TestimonialsSection from "../../Components/SolutionPAges/ZohoAutomationPa
 import GetAQuoteSection from "../../Components/SolutionPAges/ZohoAutomationPage/GetAQuoteSection";
 import OurPrinciplesSection from "@/app/Components/AboutComponents/OurPrinciplesSection";
 import WhyTeamsChooseNexzoSection from "@/app/Components/HomeComponents/WhyTeamsChooseNexzoSection";
+import WhatThisHelpsYouLaunchSection from "../../Components/SolutionPAges/SystemIntegrationAIPage/WhatThisHelpsYouLaunchSection";
+import WeAlsoHandleSection from "@/app/Components/HomeComponents/WeAlsoHandleSection";
+import RealProblemsRealResultsSection from "@/app/Components/HomeComponents/RealProblemsRealResultsSection";
 
 export default function SystemIntegrationAIPage() {
   return (
@@ -16,6 +19,10 @@ export default function SystemIntegrationAIPage() {
         optionalParagraph="If you're building a web platform or app, the risk isn't coding. It's delays, rework, unstable releases, and a team that disappears. We help you ship stable, scalable software with clear ownership from scope to support."
         buttonText="Get Your Free Audit"
         buttonLink="#"
+        gradientColor="#3b5049"
+        buttonColor="FFFFFF"
+        buttonTextColor="white"
+        imgSrc="/images/FullStackEllipse.png"
       />
       
       <NotForEveryoneSection
@@ -32,9 +39,11 @@ export default function SystemIntegrationAIPage() {
           text: "Most products don't fail in development. They fail in execution and support.",
           boldWords: ["execution", "support"]
         }}
+        color="#749182"
       />
+      <WhatThisHelpsYouLaunchSection />
       <OurPrinciplesSection title="How delivery stays predictable
-" color={"#214E34"}  principles={[
+" color={"#749182"}  principles={[
                     {
                         title: "Product clarity",
                         explanation: "Scope, success criteria, and constraints defined upfront."
@@ -52,46 +61,11 @@ export default function SystemIntegrationAIPage() {
                         explanation: "Deployment, stabilization, monitoring, and improvements."
                     }
                 ]}/>
-                <TestimonialsSection
-        testimonials={[
-          {
-            name: "David Martinez",
-            title: "Operations Director",
-            quote: "Their system integration work connected our entire tech stack. Data now flows seamlessly across all platforms.",
-            profileImage: "/images/pic1.png",
-            linkedinUrl: "#",
-            projectUrl: "#",
-            hasVideo: true
-          },
-          {
-            name: "Jennifer Kim",
-            title: "CTO",
-            quote: "The AI solutions they built understand our business context perfectly. Game-changing automation.",
-            profileImage: "/images/pic2.png",
-            linkedinUrl: "#",
-            projectUrl: "#",
-            hasVideo: true
-          },
-          {
-            name: "Robert Chen",
-            title: "VP of Sales",
-            quote: "Finally, our CRM, marketing, and finance systems all talk to each other. No more manual data entry.",
-            profileImage: "/images/pic3.png",
-            linkedinUrl: "#",
-            projectUrl: "#",
-            hasVideo: true
-          },
-          {
-            name: "Amanda Foster",
-            title: "CEO",
-            quote: "They modernized our legacy systems and connected them to modern platforms. Incredible transformation.",
-            profileImage: "/images/pic1.png",
-            linkedinUrl: "#",
-            projectUrl: "#",
-            hasVideo: true
-          }
-        ]}
-      />
+                <RealProblemsRealResultsSection 
+                  title="A few examples of systems we've delivered."
+                  highlightedWords={["examples", "systems", "delivered"]}
+                  highlightColor="#214E34"
+                />
       <WhyTeamsChooseNexzoSection title="What makes this safe to build with us" 
       BottomLine="You should never feel unsure about what's happening or who owns what."
        benefits={[
@@ -101,9 +75,35 @@ export default function SystemIntegrationAIPage() {
          "Support after launch",
          "Cost-efficient delivery without chaos"]}
          backgroundColor={"#214E34"} />
-      
-      
-      <GetAQuoteSection />
+      <WeAlsoHandleSection 
+        heading="Built with modern, maintainable stacks" 
+        description="Stacks are chosen based on product needs, not trends." 
+        services={[
+          "React",
+          "Node",
+          "Laravel",
+          "Flutter",
+          "Cloud & APIs"
+        ]} 
+        color="#214E34" 
+        highlightedWords={["modern", "stacks"]}
+      />
+      <NotForEveryoneSection
+        title="This Is Not For Everyone"
+        items={[
+          "Looking for the cheapest build",
+          "No clarity on scope",
+          "No involvement during build",
+          "One-time build with no support"
+        ]}
+        variant="not-for-everyone"
+        color="#214E34"
+      />
+
+        <div className="bg-[#749182]">
+      <GetAQuoteSection variant="Full Stack" color="FFFFFF" />
+
+        </div>
     </div>
   );
 }

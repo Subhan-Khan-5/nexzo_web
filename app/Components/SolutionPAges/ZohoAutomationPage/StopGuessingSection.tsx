@@ -21,12 +21,11 @@ export default function StopGuessingSection({
     
       <div className="relative z-10 min-w-[350px] mx-auto py-12 md:py-16">
         {/* Main Card */}
-        <div className="
-  bg-gradient-to-b
-  from-[#F8F7F8]/85
-  via-[#F8F7F8]/75
-  to-[#F8F7F8]/90
-  backdrop-blur-xl
+        <div className="bg-gradient-to-b
+from-black/10
+via-black/5
+to-black/15
+backdrop-blur-xl
   rounded-[60px]  py-10
    md:py-16
   border border-[#4B0082]
