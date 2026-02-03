@@ -72,14 +72,14 @@ export default function WhyTeamsChooseNexzoSection({
     return `linear-gradient(to right, ${color}, rgb(${lighterR}, ${lighterG}, ${lighterB}))`;
   };
 
-  const textColor = "text-gray-800";
+  const textColor = "text-white";
   const borderColor = "border-gray-300";
 
   return (
     <section className="relative w-full bg-white py-20 md:py-32">
 
-<div className={`absolute   -top-[15%]    left-[7%] opacity-80 w-[75vw] h-[62vh] bg-white blur-2xl rounded-full z-0`}></div>
-        <div className={`absolute bottom-[0%] -left-[0%]    w-[45vw] h-[42vh] bg-white blur-[125px] rounded-full z-0`}></div>
+{/* <div className={`absolute   -top-[15%]    left-[7%] opacity-80 w-[75vw] h-[62vh] bg-white blur-2xl rounded-full z-0`}></div>*/}
+        <div className={`absolute bottom-[0%] -left-[0%]    w-[45vw] h-[42vh] bg-white blur-[125px] opacity-30 rounded-full z-0`}></div> 
         
       <div className=" mx-[7.5vw]">
         {/* Container with gradient background */}
@@ -137,12 +137,12 @@ export default function WhyTeamsChooseNexzoSection({
                         {hasDescription && (
                           <button
                             onClick={() => toggleExpand(index)}
-                            className="w-8 h-8 rounded-full border-2 border-gray-800 flex items-center justify-center shrink-0 hover:bg-gray-100 transition-colors duration-200"
+                            className="w-8 h-8 rounded-full border-2 border-white flex items-center justify-center shrink-0 hover:bg-gray-100 transition-colors duration-200"
                             aria-label={isExpanded ? "Collapse" : "Expand"}
                           >
                             {isExpanded ? (
                               <svg
-                                className="w-5 h-5 text-gray-800"
+                                className="w-5 h-5 text-white"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -156,7 +156,7 @@ export default function WhyTeamsChooseNexzoSection({
                               </svg>
                             ) : (
                               <svg
-                                className="w-5 h-5 text-gray-800"
+                                className="w-5 h-5 text-white"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
