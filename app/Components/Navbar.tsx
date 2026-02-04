@@ -39,7 +39,7 @@ export default function Navbar() {
       backdropFilter: "blur(16px)",
       background: "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.15))",
       
-      borderRadius: "1rem",
+      
       scrollTrigger: {
         trigger: document.documentElement,
         start: "top -10%",
@@ -120,7 +120,7 @@ export default function Navbar() {
     className="navbar relative z-20 flex items-center justify-between px-10 py-4
                bg-black/0
                backdrop-blur-0
-               
+               rounded-2xl
                transition-all duration-300"
   >
 
