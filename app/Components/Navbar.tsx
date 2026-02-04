@@ -43,7 +43,9 @@ export default function Navbar() {
         "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.15))",
       boxShadow:
         "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)",
-    });
+      duration: 0.3,
+    })
+    
   
     ScrollTrigger.create({
       trigger: ".navbar-container-header",
@@ -51,7 +53,21 @@ export default function Navbar() {
       onEnter: () => tl.play(),
       onLeaveBack: () => tl.reverse(),
     });
+
+
+    const tl2 = gsap.timeline({ paused: true });
+tl2.set(".navbar-btn", { display: "flex", width: "auto", height: "40px", pointerEvents: "auto" });
+tl2.to(".navbar-btn", { scale: 1, opacity: 1, duration: 0.25, ease: "power2.out" });
+
+
+    ScrollTrigger.create({
+      trigger: ".navbar-btn",
+      start: "top -45%",
+      onEnter: () => tl2.play(),
+      onLeaveBack: () => tl2.reverse(),
+    });
   }, []);
+  
   
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -135,13 +151,13 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Navigation - Hidden below 1040px */}
-        <div className="hidden min-[1041px]:flex items-center gap-8" >
+        <div className="hidden min-[1041px]:flex items-center justify-between gap-8" >
           <NavLinks isAboutUsPage={isAboutUsPage} />
+         
           </div>
-          <div className="hidden min-[1041px]:flex items-center gap-8" >
-            
-                <NexzoButton />
-        </div>
+          <div className="hidden w-0 h-0 min-[1041px]:hidden items-center gap-8 navbar-btn scale-0 opacity-0 pointer-events-none">
+  <NexzoButton />
+</div>
 
         {/* Hamburger Menu Button - Visible below 1040px */}
         {isMobile && (

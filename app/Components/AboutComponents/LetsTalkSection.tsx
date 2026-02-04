@@ -26,6 +26,15 @@ export default function LetsTalkSection() {
           </button>
         </div>
       </div>
+
+      
+  <h4 className="relative group px-5 py-2.5 border border-black/24 rounded-full font-medium text-black/75 overflow-hidden flex justify-center items-center w-[100px] text-[18px]">
+    <span className="absolute left-0 bottom-[-100%] w-full h-full bg-black rounded-full transition-all duration-400 ease-in-out group-hover:bottom-0 group-hover:rounded-none"></span>
+    <a href="#" className="relative z-10 text-black/75 transition-colors duration-400 ease-in-out group-hover:text-white">Work</a>
+  </h4>
+
+  
+
     </section>
   );
 }

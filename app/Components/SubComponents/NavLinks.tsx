@@ -98,7 +98,7 @@ export default function NavLinks({ isAboutUsPage = false }: NavLinksProps) {
         </div>
       </div>
       
-      <Link href="/AboutUs" className={isAboutUsPage ? "hover:text-gray-200 transition-colors" : ""}>About Us</Link>
+      <Link href="/AboutUs" className={isAboutUsPage ? "hover:text-gray-200 transition-colors " : ""}>About Us</Link>
     </nav>
   );
 }
