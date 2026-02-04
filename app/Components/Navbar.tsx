@@ -7,6 +7,11 @@ import { useState, useRef, useEffect } from "react";
 import NexzoButton from "./SubComponents/NexzoButton";
 import NavLinks from "./SubComponents/NavLinks";
 import Image from "next/image";
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -27,6 +32,26 @@ export default function Navbar() {
     window.addEventListener('resize', checkScreenSize);
     return () => window.removeEventListener('resize', checkScreenSize);
   }, []);
+
+
+  useEffect(() => {
+    gsap.to(".navbar", {
+      backdropFilter: "blur(16px)",
+      background: "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.15))",
+      
+      borderRadius: "1rem",
+      scrollTrigger: {
+        trigger: document.documentElement,
+        start: "top -10%",
+        toggleActions: "play reverse play reverse",
+      },
+      // Adjusted gradient and shadow
+      
+      boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)", // shadow-lg approximation
+    });
+  }, []);
+  
+  
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (pathname === "/") {
@@ -89,13 +114,16 @@ export default function Navbar() {
   const isAboutUsPage = pathname === "/AboutUs";
 
   return (
-    <nav className="w-[85vw] mx-auto fixed top-4 left-0 right-0 z-50 rounded-2xl">
-      <header className="relative z-20 flex items-center justify-between px-10 py-4
-                         bg-gradient-to-b
-from-black/10
-via-black/5
-to-black/15
-backdrop-blur-xl shadow-lg rounded-2xl">
+   <div className=" navbar-container  relative z-50">
+     <nav className="w-[85vw] mx-auto fixed top-4 left-0 right-0 z-50 isolate">
+  <header
+    className="navbar relative z-20 flex items-center justify-between px-10 py-4
+               bg-black/0
+               backdrop-blur-0
+               
+               transition-all duration-300"
+  >
+
         {/* Logo */}
         <Link href="/" onClick={handleLogoClick} className="flex items-center gap-2 font-semibold">
           <Image src="/images/Purple.png" alt="Nexzo Logo" width={35} height={35} />
@@ -246,5 +274,6 @@ backdrop-blur-xl shadow-lg rounded-2xl">
         </div>
       )}
     </nav>
+   </div>
   );
 }
