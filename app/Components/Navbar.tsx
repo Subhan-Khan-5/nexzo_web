@@ -35,22 +35,23 @@ export default function Navbar() {
 
 
   useEffect(() => {
-    gsap.to(".navbar", {
+    const tl = gsap.timeline({ paused: true });
+  
+    tl.to(".navbar", {
       backdropFilter: "blur(16px)",
-      background: "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.15))",
-      
-      
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: "top -10%",
-        toggleActions: "play reverse play reverse",
-      },
-      // Adjusted gradient and shadow
-      
-      boxShadow: "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)", // shadow-lg approximation
+      background:
+        "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.05), rgba(0,0,0,0.15))",
+      boxShadow:
+        "0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)",
+    });
+  
+    ScrollTrigger.create({
+      trigger: ".navbar-container-header",
+      start: "top -10%",
+      onEnter: () => tl.play(),
+      onLeaveBack: () => tl.reverse(),
     });
   }, []);
-  
   
 
   const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
